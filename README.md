@@ -10,27 +10,27 @@ body requests to be sent to the CSG.
 Import or copy the contents of the ChikkaRSALib.php file in your code and
 simply use it as shown below:
 
-    ```php
-    require_once("ChikkaRSALib.php");
+```php
+require_once("ChikkaRSALib.php");
 
-    // generate a signature for string "my data" using file myprivkey.pem
-    $signature = generate_signature("my data", file_get_contents("myprivkey.pem"));
+// generate a signature for string "my data" using file myprivkey.pem
+$signature = generate_signature("my data", file_get_contents("myprivkey.pem"));
     ```
 
 For testing purposes, you can use the `verify_signature()` function to test whether
 your generated signature is actually signed properly and can be verified by the
 corresponding public key.
 
-    ```php
-    // verify given signature using the data "my data" and file mypubkey.pem
-    $verified = verify_signature("my data", file_get_contents("mypubkey.pem"), $signature);
-    if($verified == 1) {
-        echo "Verification success"
-    }
-    else {
-        echo "Verification failed"
-    }
-    ```
+```php
+// verify given signature using the data "my data" and file mypubkey.pem
+$verified = verify_signature("my data", file_get_contents("mypubkey.pem"), $signature);
+if($verified == 1) {
+    echo "Verification success"
+}
+else {
+    echo "Verification failed"
+}
+```
 
 ## Open Source Licenses
 
