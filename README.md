@@ -15,7 +15,7 @@ require_once("ChikkaRSALib.php");
 
 // generate a signature for string "my data" using file myprivkey.pem
 $signature = generate_signature("my data", file_get_contents("myprivkey.pem"));
-    ```
+```
 
 For testing purposes, you can use the `verify_signature()` function to test whether
 your generated signature is actually signed properly and can be verified by the
